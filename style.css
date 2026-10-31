@@ -1,0 +1,230 @@
+/* 1. Reset Global & Kontainer Utama */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    font-family: system-ui,sans-serif;
+    background-color: #f8fafc;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    margin-bottom: 35px;
+}
+
+.section h2 {
+    color: #000000;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+}
+
+/* 2. Header & Navigasi */
+.site-header {
+    background-color: #3a9425;
+    color: #ffffff;
+    padding: 18px 0;
+    margin-bottom: 30px;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: #fffdff;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: #2e721f;
+}
+
+/* 3. Hero Banner & Sistem Grid */
+.hero-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content p {
+    margin-bottom: 14px;
+}
+
+.hero-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    
+    border: 1px solid #000000;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* 4. Kartu Info, Statistik, & Menu */
+.info-card,
+.stat-card,
+.menu-card,
+.filter-form,
+.empty-state {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.stat-number,
+.harga {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+    margin: 6px 0;
+}
+
+.menu-card {
+    padding: 0;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.kategori-label,
+.stok-info {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #f1f5f9;
+}
+
+/* 5. Badge Status Stok, Tombol, & Form Filter */
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.badge-success { background: #00ff84; color: #000000; }
+.badge-warning { background: #fef9c3; color: #000000; }
+.badge-danger  { background: #fee2e2; color: #991b1b; }
+
+.btn-primary,
+.btn-reset {
+    display: inline-block;
+    padding: 9px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary { background: #2e721f; color: #ffffff; }
+.btn-primary:hover { background: #2e721f; }
+.btn-reset { background: #e2e8f0; color: #334155; }
+
+.filter-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-form input,
+.filter-form select {
+    flex: 1;
+    min-width: 180px;
+    padding: 9px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+/* 6. Footer & Responsif Layar HP */
+.site-footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .header-inner,
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
