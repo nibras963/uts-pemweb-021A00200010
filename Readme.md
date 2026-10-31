@@ -53,6 +53,11 @@ uts-pemweb-021A00200010/
 
 7.in_array(...): Digunakan pada katalog.php untuk memvalidasi apakah kategori yang dikirim melalui parameter URL ($_GET['kategori']) terdaftar di dalam array $daftarKategori.
 ## 6.Tangkapan Layar (Screenshots)
+
+![Tampilan katalog menu](./screenshots/beranda&profile.jpg)
+![Tampilan katalog menu](./screenshots/katalogmenu.jpg)
+
+
 ## 7.. Sumber Referensi dan Catatan Pemakaian AI
     Sumber referensi:
     pertemuan 1-6
