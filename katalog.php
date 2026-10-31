@@ -43,6 +43,7 @@ $ringkasan  = hitungRingkasanMenu($daftarMenu);
         <!-- Ringkasan Statistik -->
         <section class="summary-section">
             <h2>Ringkasan Statistik Katalog</h2>
+            <br>
             <div class="grid-3">
                 <article class="stat-card">
                     <h3>Total Varian</h3>
@@ -57,11 +58,13 @@ $ringkasan  = hitungRingkasanMenu($daftarMenu);
                     <p class="stat-number"><?= e(formatRupiah($ringkasan['rataRataHarga'])); ?></p>
                 </article>
             </div>
+            <br>
         </section>
 
         <!-- Filter & Pencarian -->
         <section class="filter-section">
             <h2>Cari & Saring Menu</h2>
+            <br>
             <form action="katalog.php" method="GET" class="filter-form">
                 <input type="text" name="cari" placeholder="Cari menu (misal: Durian)..." value="<?= e($kataKunci); ?>">
                 
@@ -82,7 +85,7 @@ $ringkasan  = hitungRingkasanMenu($daftarMenu);
         <!-- Daftar Menu  -->
         <section class="catalog-section">
             <h2>Daftar Menu (<?= count($menuTampil); ?> Menu)</h2>
-
+            <br>
             <?php if (empty($menuTampil)) : ?>
                 <p class="empty-state">Menu yang Anda cari tidak ditemukan.</p>
             <?php else : ?>

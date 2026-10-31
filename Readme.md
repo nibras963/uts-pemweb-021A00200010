@@ -18,9 +18,10 @@ Repositori ini berisi proyek mini mata kuliah **Pemrograman Web** berupa website
 Website ini dibangun untuk menampilkan informasi profil gerai serta katalog produk secara dinamis kepada pelanggan, lengkap dengan fitur pencarian, penyaringan (*filter*) kategori, indikator status ketersediaan stok otomatis, dan ringkasan statistik menu.
 
 ---
+## 3.Cara menjalankan di localhost.
+    buka terminal ketik perintah php -S localhost:8000,lanjut dengan cmd + cilk link nya untuk membuka ke halaman browser
 
-## 3. Struktur Folder & File Proyek
-```text
+## 4. Struktur Folder & File Proyek.
 uts-pemweb-021A00200010/
 ├── assets/                  # Folder penyimpanan gambar produk & logo (.jpg)
 │   ├── es teler.jpg
@@ -36,4 +37,24 @@ uts-pemweb-021A00200010/
 ├── data.php                 # Sumber data utama berupa array asosiatif multidimensi ($daftarMenu)
 ├── functions.php            # Kumpulan fungsi logika, perhitungan statistik, filter, & sanitasi XSS
 ├── Readme.md                # Dokumentasi proyek
-└── style.css                # Eksternal stylesheet (Box-sizing, Flexbox, CSS Grid, & Media Queries)
+└── style.css                # Eksternal stylesheet (Box-sizing, Flexbox, CSS Grid, & Media Queries)# uts-pemweb-021A00200010
+## 5.Daftar fungsi array bawaan yang dipakai dan untuk apa.
+1.count($menu): Digunakan di dalam fungsi hitungRingkasanMenu() untuk menghitung jumlah total item/. varian menu yang ada di dalam array.
+
+2.array_column($menu, 'stok') & array_column($menu, 'harga'): Digunakan di dalam fungsi hitungRingkasanMenu() untuk mengambil satu kolom nilai spesifik (stok atau harga) dari array multidimensi menjadi array satu dimensi.
+
+3.array_sum(...): Digunakan untuk menjumlahkan seluruh angka di dalam array hasil array_column guna mendapatkan total stok porsi siap saji dan total harga (untuk dihitung rata-ratanya).
+
+4.min(...) & max(...): Digunakan untuk mencari nilai harga paling murah dan harga paling mahal dari array kolom harga.
+
+5.array_filter($menu, ...): Digunakan di dalam fungsi filterMenu() untuk menyaring elemen array $daftarMenu yang sesuai dengan kata kunci pencarian dan kategori yang dipilih pengguna.
+
+6.array_values(...): Digunakan setelah proses array_filter() untuk mengurutkan kembali indeks array mulai dari 0.
+
+7.in_array(...): Digunakan pada katalog.php untuk memvalidasi apakah kategori yang dikirim melalui parameter URL ($_GET['kategori']) terdaftar di dalam array $daftarKategori.
+## 6.Tangkapan Layar (Screenshots)
+## 7.. Sumber Referensi dan Catatan Pemakaian AI
+    Sumber referensi:
+    pertemuan 1-6
+    catatan penggunaan ai:
+    diskusi untuk merapikan latar belakang foto produk kemasan cup Atika agar seragam, serta melakukan pengecekan kelengkapan syarat wajib proyek UTS.

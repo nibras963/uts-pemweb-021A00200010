@@ -49,6 +49,7 @@ $ringkasan = hitungRingkasanMenu($daftarMenu);
                     <span><strong><?= $ringkasan['totalStok']; ?></strong> Porsi Siap Saji</span>
                     <span>Mulai <strong><?= e(formatRupiah($ringkasan['hargaTermurah'])); ?></strong></span>
                 </div>
+                <br>
                 <a href="katalog.php" class="btn-primary">Lihat Katalog Lengkap</a><br>
             </div>
             <div class="hero-image">
