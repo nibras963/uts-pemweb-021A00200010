@@ -19,25 +19,57 @@ Website ini dibangun untuk menampilkan informasi profil gerai serta katalog prod
 
 ---
 ## 3.Cara menjalankan di localhost.
-    buka terminal ketik perintah php -S localhost:8000,lanjut dengan cmd + cilk link nya untuk membuka ke halaman browser
+1 Simpan folder proyek uts-pemweb-025A00200010
+2 Pastikan struktur file sudah sesuai.
+3 Buka terminal lalu ketik php -S localhost8000
+4 Buka browser, kemudian masukkan alamat berikut:http://localhost:8000
+## 4. Daftar fitur 
+1. **Halaman Beranda**
+- File: index.php
+- Menampilkan informasi umum umkm, deskripsi, ringkasan varian menu, serta informasi jam operasional, alamat gerai, dan kontak pemesanan.
 
-## 4. Struktur Folder & File Proyek.
-uts-pemweb-021A00200010/
-├── assets/                  # Folder penyimpanan gambar produk & logo (.jpg)
-│   ├── es teler.jpg
-│   ├── es teler durian.jpg
-│   ├── es teler keju.jpg
-│   ├── es teler ice cream.jpg
-│   ├── es buah.jpg
-│   ├── es buah durian.jpg
-│   ├── es ubi ungu.jpg
-│   └── es dawet ayu.jpg
-├── index.php                # Halaman utama (Profil usaha, ringkasan singkat, & informasi kontak)
-├── katalog.php              # Halaman katalog dinamis (Statistik, filter GET, & daftar kartu menu)
-├── data.php                 # Sumber data utama berupa array asosiatif multidimensi ($daftarMenu)
-├── functions.php            # Kumpulan fungsi logika, perhitungan statistik, filter, & sanitasi XSS
-├── Readme.md                # Dokumentasi proyek
-└── style.css                # Eksternal stylesheet (Box-sizing, Flexbox, CSS Grid, & Media Queries)# uts-pemweb-021A00200010
+2. **Navigasi Halaman**
+- File: index.php, katalog.php
+- Menghubungkan halaman beranda dengan halaman katalog menu.
+
+3. **Menampilkan Daftar Menu**
+- File: data.php, katalog.php
+- Menyimpan dan menampilkan data menu.
+
+4. **Filter Kategori Menu**
+- File: katalog.php
+- Fungsi: filterMenu(), in_array(), array_filter(), stripos()
+- Menyaring daftar menu secara dinamis melalui parameter URL ($_GET) berdasarkan kata kunci nama produk dan pilihan  kategori.
+
+5. **Informasi Statistik Ringkkasan menu**
+- File: katalog.php
+- Fungsi: count()
+- Menghitung jumlah seluruh menu dan jumlah menu yang sedang ditampilkan.
+
+6. **Informasi Harga Termurah**
+- File: functions.php, index.php, katalog.php
+- Fungsi: hitungRingkasanMenu(), count(), array_column(), array_sum()
+Menghitung total varian menu, total porsi siap saji yang tersedia, dan rata-rata harga menu secara otomatis.
+
+7. **Status Ketersediaan Stok & Warna Badge Otomatis**
+- functions.php.php, katalog.php
+- Fungsi: getStatusStok()
+- Menentukan status stok menggunakan percabangan logika if / elseif / else serta menampilkan badge warna dinamis: Hijau (Tersedia), Kuning (Stok Menipis), dan Merah (Habis).
+
+8. **Format Harga Rupiah**
+- File: functions.php
+- Fungsi: formatRupiah()
+- Mengubah angka interger harga menjadi format mata uang Rupiah.
+
+9. **Keamanan Output HTML**
+- File: functions.php, index.php, katalog.php
+- Fungsi: e()
+- Mengamankan teks sebelum ditampilkan pada halaman HTML.
+
+10. **Tampilan Responsif**
+- File: style.css
+- Mengatur tampilan website agar menyesuaikan ukuran layar laptop, tablet, dan HP.
+
 ## 5.Daftar fungsi array bawaan yang dipakai dan untuk apa.
 1.count($menu): Digunakan di dalam fungsi hitungRingkasanMenu() untuk menghitung jumlah total item/. varian menu yang ada di dalam array.
 
