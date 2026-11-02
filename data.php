@@ -49,7 +49,7 @@ $daftarMenu = [
         'nama'     => 'Es Buah Durian',
         'kategori' => 'Es Buah',
         'harga'    => 15000,
-        'stok'     => 13,
+        'stok'     => 10,
         'gambar'   => 'es buah durian.jpg'
     ],
     [
