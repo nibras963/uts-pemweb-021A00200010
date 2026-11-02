@@ -19,10 +19,10 @@ Website ini dibangun untuk menampilkan informasi profil gerai serta katalog prod
 
 ---
 ## 3.Cara menjalankan di localhost.
-1 Simpan folder proyek uts-pemweb-025A00200010
-2 Pastikan struktur file sudah sesuai.
-3 Buka terminal lalu ketik php -S localhost8000
-4 Buka browser, kemudian masukkan alamat berikut:http://localhost:8000
+1. Simpan folder proyek uts-pemweb-025A00200010
+2. Pastikan struktur file sudah sesuai.
+3. Buka terminal lalu ketik php -S localhost8000
+4. Buka browser, kemudian masukkan alamat berikut:http://localhost:8000
 ## 4. Daftar fitur 
 1. **Halaman Beranda**
 - File: index.php
