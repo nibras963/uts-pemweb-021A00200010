@@ -227,7 +227,7 @@ main {
 @media (max-width: 768px) {
     .header-inner,
     .hero-section {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
     }
 

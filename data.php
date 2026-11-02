@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-//daftar menu mengunaakn aray
+//daftar menu mengunaakn aray asosiatif multidimensi
 $daftarMenu = [
     [
         'id'       => 'MENU-01',
