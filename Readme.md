@@ -62,4 +62,4 @@ uts-pemweb-021A00200010/
     Sumber referensi:
     pertemuan 1-6
     catatan penggunaan ai:
-    diskusi untuk merapikan latar belakang foto produk kemasan cup Atika agar seragam, serta melakukan pengecekan kelengkapan syarat wajib proyek UTS.
+    diskusi untuk merapikan latar belakang foto produk kemasan cup Atika agar seragam, dan untuk perbaikan perancangan tampilan web,serta melakukan pengecekan kelengkapan syarat wajib proyek UTS.
